@@ -67,15 +67,10 @@ public class Lab8P1_LuisVarela {
         boolean correcto = false;
         for (int i = 0; i < libreria_0.length; i++) {
             for (int j = 0; j < libreria_0[i].length; j++) {
-                Libro m = libreria_0[i][j];
-                if (libro1.equalsIgnoreCase(m.getLibro())) {
-                    if (escritor1.equalsIgnoreCase(m.getEscritor())) {
-                        if (año1 == m.getAño()) {
-                            contador0 = i;
-                            contador1 = j;
-                            correcto = true;
-                        }
-                    }
+                if (libreria_0[i][j].getLibro().equalsIgnoreCase(libro1) && libreria_0[i][j].getEscritor().equalsIgnoreCase(escritor1) && libreria_0[i][j].getAño() == año1) {
+                    contador0 = i;
+                    contador1 = j;
+                    correcto = true;
                 }
             }
         }
@@ -134,7 +129,7 @@ public class Lab8P1_LuisVarela {
                 Libro m = new Libro(año, escritor, libro);
                 librero[i][j] = m;
                 System.out.println("El libro fue agregado exitosamente\n");
-                
+
             }
         }
 
